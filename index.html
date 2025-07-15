@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTips Express</title>
+    <!-- Enlaza el archivo CSS para los estilos -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Enlaza la fuente Inter desde Google Fonts para una mejor tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor principal de la aplicación -->
+    <div class="container">
+        <h1>EcoTips Express</h1>
+        <p>¡Obtén consejos rápidos y prácticos sobre sostenibilidad! Simplemente escribe un tema y haz clic en "Generar Consejos".</p>
+
+        <!-- Sección de entrada para el usuario -->
+        <div class="input-section">
+            <input type="text" id="topicInput" placeholder="Ej: 'ahorrar agua', 'reciclar', 'energía solar'">
+            <button id="generateBtn">Generar Consejos</button>
+        </div>
+
+        <!-- Área de visualización donde se mostrarán los consejos de Gemini -->
+        <div id="results" class="results-section">
+            <p>Escribe un tema y haz clic en "Generar Consejos" para empezar.</p>
+        </div>
+    </div>
+
+    <!-- Enlaza el archivo JavaScript. Es crucial que esté al final del <body>
+         para asegurar que todos los elementos HTML estén cargados antes de que el script intente acceder a ellos. -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

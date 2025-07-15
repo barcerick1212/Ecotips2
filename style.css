@@ -1,0 +1,158 @@
+/* Establece estilos base para el cuerpo de la página */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Usa la fuente Inter */
+    background: linear-gradient(to right, #4CAF50, #2E8B57); /* Fondo degradado verde */
+    color: #ffffff; /* Color de texto blanco */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Altura mínima del 100% del viewport */
+    padding: 20px; /* Relleno general para evitar que el contenido toque los bordes */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+}
+
+/* Estilos para el contenedor principal de la aplicación */
+.container {
+    text-align: center; /* Centra el texto dentro del contenedor */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+    padding: 40px; /* Relleno interno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    max-width: 700px; /* Ancho máximo */
+    width: 100%; /* Ocupa todo el ancho disponible hasta el max-width */
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-size: 2.8em; /* Tamaño de fuente grande */
+    margin-bottom: 15px; /* Margen inferior */
+    color: #d1f7d1; /* Color verde claro para el título */
+}
+
+/* Estilos para los párrafos */
+p {
+    font-size: 1.1em; /* Tamaño de fuente */
+    margin-bottom: 30px; /* Margen inferior */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Estilos para la sección de entrada (input y botón) */
+.input-section {
+    display: flex; /* Usa flexbox para alinear el input y el botón */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 15px; /* Espacio entre el input y el botón */
+    margin-bottom: 30px; /* Margen inferior */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+/* Estilos para el campo de entrada de texto */
+#topicInput {
+    padding: 12px 20px; /* Relleno interno */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Esquinas muy redondeadas (forma de píldora) */
+    font-size: 1.1em; /* Tamaño de fuente */
+    width: 60%; /* Ancho relativo */
+    max-width: 400px; /* Ancho máximo */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra interna */
+    transition: all 0.3s ease; /* Transición suave para cambios de estilo */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    color: #333; /* Color de texto oscuro */
+}
+
+/* Estilos para el placeholder del input */
+#topicInput::placeholder {
+    color: #888; /* Color gris para el texto del placeholder */
+}
+
+/* Estilos cuando el input está enfocado */
+#topicInput:focus {
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+    box-shadow: 0 0 0 3px rgba(144, 238, 144, 0.7); /* Sombra de enfoque verde suave */
+}
+
+/* Estilos para el botón de generar consejos */
+#generateBtn {
+    padding: 12px 25px; /* Relleno interno */
+    background-color: #8BC34A; /* Color verde claro y llamativo */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Esquinas muy redondeadas */
+    font-size: 1.1em; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero al pasar el ratón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilos del botón al pasar el ratón por encima */
+#generateBtn:hover {
+    background-color: #689F38; /* Un verde más oscuro */
+    transform: translateY(-2px); /* Pequeño levantamiento visual */
+}
+
+/* Estilos del botón al hacer clic */
+#generateBtn:active {
+    transform: translateY(0); /* Vuelve a su posición original */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+
+/* Estilos para el botón cuando está en estado de carga (deshabilitado) */
+#generateBtn.loading {
+    background-color: #4CAF50; /* Un color diferente cuando está cargando */
+    cursor: not-allowed; /* Cursor de "no permitido" */
+    opacity: 0.7; /* Ligeramente transparente */
+}
+
+/* Estilos para la sección de resultados */
+.results-section {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semi-transparente */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 25px; /* Relleno interno */
+    min-height: 150px; /* Altura mínima */
+    text-align: left; /* Alineación de texto a la izquierda */
+    line-height: 1.8; /* Espaciado entre líneas */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    word-wrap: break-word; /* Asegura que el texto largo se rompa */
+}
+
+/* Estilos para los párrafos dentro de la sección de resultados */
+.results-section p {
+    margin-bottom: 10px; /* Margen inferior */
+    color: #e0ffe0; /* Color verde muy claro */
+    font-size: 1em; /* Tamaño de fuente */
+}
+
+/* Elimina el margen inferior del último párrafo en resultados */
+.results-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilos para listas no ordenadas dentro de la sección de resultados */
+.results-section ul {
+    list-style: disc inside; /* Tipo de viñeta y posición */
+    padding-left: 20px; /* Relleno a la izquierda para las viñetas */
+    margin: 0; /* Elimina márgenes predeterminados */
+}
+
+/* Estilos para elementos de lista dentro de la sección de resultados */
+.results-section li {
+    margin-bottom: 8px; /* Margen inferior para cada elemento de la lista */
+}
+
+/* Media queries para hacer la página responsiva en pantallas pequeñas */
+@media (max-width: 600px) {
+    .input-section {
+        flex-direction: column; /* Apila el input y el botón verticalmente */
+        align-items: center; /* Centra los elementos apilados */
+    }
+
+    #topicInput {
+        width: 90%; /* Ancho más grande para móviles */
+        margin-bottom: 15px; /* Margen inferior cuando están apilados */
+    }
+
+    #generateBtn {
+        width: 90%; /* Ancho más grande para móviles */
+    }
+}
